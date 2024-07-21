@@ -1,0 +1,88 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #d55a4f; 
+}
+
+.ghost-container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.ghost {
+    position: relative;
+    width: 120px;
+    height: 180px;
+    background: #fff;
+    border-radius: 60px 60px 0 0;
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.6);
+    animation: float 3s ease-in-out infinite;
+}
+
+.face {
+    position: absolute;
+    top: 40px;
+    width: 100%;
+}
+
+.eye {
+    position: absolute;
+    width: 12px;
+    height: 15px;
+    top: 20px;
+    background: #000;
+    border-radius: 50%;
+}
+
+.eye.left {
+    left: 30%; 
+}
+
+.eye.right {
+    right: 30%; 
+}
+
+.blush {
+    position: absolute;
+    width: 12px;
+    height: 12px;
+    top: 40px; 
+    background: #ff9cc0;
+    border-radius: 50%;
+}
+
+.blush.left {
+    left: 20%; 
+}
+
+.blush.right {
+    right: 20%; 
+}
+
+.shadow {
+    position: absolute;
+    bottom: -33px;
+    width: 100px;
+    height: 20px;
+    background: rgba(0, 0, 0, 0.2);
+    border-radius: 50%;
+    box-shadow: 0 0 2px rgba(0, 0, 0, 0.486);
+    animation: shadow 3s ease-in-out infinite;
+}
+
+@keyframes float {
+    50% {
+        transform: translateY(-20px);
+    }
+}
+
+@keyframes shadow {
+    50% {
+        transform: scale(0.85);
+    }
+}
